@@ -1,0 +1,30 @@
+.box:first-child {
+    display: flex;
+    flex-direction: row;
+}
+.box img {
+    width: 25%;
+
+}
+
+.box section{
+    width: 75%;
+    margin-left: 15px;
+    padding: 8px;
+}
+
+.box p{
+    margin: 15px 0;
+}
+
+.box section span{
+    border: 1px solid var(--verde);
+    border-radius: 120px;
+    padding: 8px;
+    margin: 10px;
+}
+
+#map { 
+    height: 180px; 
+    
+}

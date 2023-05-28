@@ -1,0 +1,56 @@
+<main class="container">
+  <div class="double-width">
+    <!-- Validando se a lista de usuários não está vazia, se não estiver vazia, exibe os usuários,
+     caso contrário, fica invisivel-->
+    <div class="container-lista" *ngIf="listUsers.length != 0">
+      <h3>Lista de usuários</h3>
+      <div class="lista">
+        <mat-card class="card-user" *ngFor="let user of listUsers">
+          <!-- Recebendo o link da foto do usuário
+            Exemplo: [src]="user.avatar_url" ou src="{{user.avatar_url}}"
+           -->
+          <img mat-card-image [src]="user.avatar_url" [alt]="user.name">
+          <mat-card-content>
+            <p>Username: <span>{{user.login}}</span></p>
+          </mat-card-content>
+          <mat-card-actions>
+            <!-- Efetuando o evento de click e passando um usúario como paramentro -->
+            <a mat-button class="btn-visualizar" (click)="getDetails(user)"><img src="./../assets/imagens/icon-visualizar.png"
+                alt="icone visualizar"></a>
+            <a mat-button class="bnt-deletar" (click)="deletUser(user)"><img src="./../assets/imagens/icon-lixeira.png"
+                alt="icone visualizar"></a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- Formulário -->
+  <div class="double-width">
+    <section class="container-form">
+      <div class="box-header">
+        <img src="./../assets/imagens/logo.png" alt="logo">
+        <p>Pesquisa de usuário</p>
+      </div>
+      <div class="box-main">
+        <p>Preencha o campo abaixo para pesquisar um usuário do github.</p>
+      </div>
+      <!-- Vinculando o formulário HTML com a parte lógica no ts e executando um evento de envio (ngSubmit)="getUser()"-->
+      <form [formGroup]="formGroup" (ngSubmit)="getUser()">
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput type="text" placeholder="Exemple: exem123" formControlName="username">
+          <mat-icon matSuffix></mat-icon>
+          <!-- Validando se o campo está vazio -->
+          <mat-error *ngIf="formGroup.get('username')?.getError('required')">Campo obrigatório</mat-error>
+        </mat-form-field>
+        <!-- Validando se o formulário está cumprindo os requisitos do campos-->
+        <button mat-flat-button matTooltip="Procurar Usuário" [disabled]="formGroup.invalid">
+          <mat-icon *ngIf="false">search</mat-icon>
+          BUSCAR
+        </button>
+      </form>
+    </section>
+  </div>
+</main>

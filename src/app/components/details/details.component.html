@@ -1,0 +1,14 @@
+<div class="container-detalhes">
+    <div class="box">
+        <img [src]="user.avatar_url" alt="imagem">
+        <section>
+            <p>Usuário: {{user.login}}</p>
+            <p>Nome: {{user.name}}</p>
+            <span>Seguidores: {{user.following}}</span>
+            <span>Seguindo: {{user.followers}}</span>
+        </section>
+    </div>
+    <div class="box">
+        <div id="map"></div>
+    </div>
+</div>

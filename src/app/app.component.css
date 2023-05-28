@@ -1,0 +1,200 @@
+/*Css do componente app*/
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.double-width {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.double-width:first-child {
+    width: 75%;
+    height: 100%;
+    background-image: url("../assets/imagens/bg-laterial.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-start;
+  
+}
+
+
+
+.container-form p {
+    color: #717171;
+    font-family: 'Roboto';
+    padding: 15px 0;
+    margin: 0 auto;
+
+}
+
+.container-form p:last-child {
+    width: 75%;
+}
+
+.box-header {
+    margin: 0 auto;
+    width: 62%;
+    border-bottom: 1px solid #c4c4c4;
+    margin-bottom: 25px;
+}
+
+
+form {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+form button {
+    background-color: var(--verde);
+    width: 65%;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: white;
+    box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.189);
+}
+
+form button:active{
+    scale: 0.9;
+    box-shadow: none;
+}
+
+form button:disabled{
+    background-color: rgb(113,113,113);
+    box-shadow: none;
+}
+
+/* Lista de usuários */
+
+
+.container-lista {
+    width: 88%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 25px;
+    padding: 20px;
+    
+}
+
+.lista {
+ 
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.card-user {
+    width: 200px;
+    height: 200px;
+    border: 0.3px solid var(--verde);
+    border-radius: 7px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-user:hover {
+    box-shadow: 7px 10px 5px -4px rgba(0, 0, 0, 0.21);
+
+}
+
+.card-user img {
+    width: 45%;
+    height: 55%;
+    border-radius: 50%;
+    margin-top: 8px;
+   
+
+}
+
+.card-user mat-card-content {
+    margin: 15px 0;
+}
+
+.btn-visualizar {
+    border-radius: 120px;
+    background-color: var(--verde);
+}
+
+.btn-visualizar:hover{
+    background-color: #16A74A;
+}
+
+.bnt-deletar {
+    margin-left: 8px;
+    border-radius: 120px;
+    border: 1px solid var(--verde);
+}
+
+.btn-visualizar img,
+.bnt-deletar img {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 767px) {
+    .container{
+        overflow: auto;
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .double-width {
+      width: 100%;
+    }
+  
+    .double-width:first-child {
+      width: 100%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+
+    }
+  
+    .container-form p:last-child {
+      width: 100%;
+    }
+  
+    .box-header {
+      width: 100%;
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    .lista {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card-user {
+      width: 80%;
+      margin: 8px;
+    }
+  }
+  
