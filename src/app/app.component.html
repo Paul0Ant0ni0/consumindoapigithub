@@ -23,7 +23,6 @@
 
 
       <div class="lista">
-        
         <mat-card class="card-user" *ngFor="let user of listUsers | slice:((paginator.pageIndex) * paginator.pageSize):((paginator.pageIndex + 1) * paginator.pageSize)">
           <!-- Recebendo o link da foto do usuário
             Exemplo: [src]="user.avatar_url" ou src="{{user.avatar_url}}"
