@@ -1,5 +1,4 @@
 # Pesquisausuariogithub
-
 <h1 align="center">Consumindo API do GitHub com Angular</h1>
 
 <p align="center">
@@ -8,12 +7,24 @@
 </p>
 
 <p align="center">
-  Esse projeto é uma aplicação em Angular que consome a API do GitHub para exibir informações de usuários e repositórios.
+  Esse projeto é uma aplicação em Angular que consome a API do GitHub para buscar usuários com base no username, montar uma lista com os usuários buscados e exibir informações detalhadas. Além disso, utiliza a biblioteca Leaflet para mostrar a localização dos usuários no mapa.
 </p>
 
 <p align="center">
   <a href="https://app-usuariogithub.web.app/">Link da aplicação</a> | <a href="https://github.com/Paul0Ant0ni0/consumindoapigithub">Repositório no GitHub</a>
 </p>
+
+<h2>Funcionalidades</h2>
+
+<ul>
+  <li>Buscar um usuário na API do GitHub com base no username</li>
+  <li>Montar uma lista com os usuários buscados</li>
+  <li>Ao clicar no nome do usuário, acessar uma tela com detalhamento, onde são exibidas as informações retornadas da API</li>
+  <li>Exibir a localização do usuário no mapa usando as ferramentas do Leaflet, como markers ou circles</li>
+  <li>Remover um usuário da lista</li>
+</ul>
+
+<h2>Preview da Aplicação</h2>
 
 <table align="center">
   <tr>
