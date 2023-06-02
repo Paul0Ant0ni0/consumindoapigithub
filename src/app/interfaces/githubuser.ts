@@ -10,5 +10,6 @@ export interface Githubuser {
     email: string,
     bio: string,
     public_repos: string,
-    html_url: string
+    html_url: string,
+    created_at: string
 }

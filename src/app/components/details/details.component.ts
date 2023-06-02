@@ -17,6 +17,8 @@ export class DetailsComponent implements OnInit{
   mapContainer!: ElementRef;
   map: any;
 
+  public loading: boolean = true;
+
   public userLocation!: UserLocation;
   
   constructor(@Inject(MAT_DIALOG_DATA) public user: Githubuser, private mapService: MapsApiService){
@@ -34,6 +36,7 @@ export class DetailsComponent implements OnInit{
   public renderMap(userLocation: UserLocation): void{
     //Criando o mapa na tela com base na referencia da localização
     //Number(userLocation.lat) -. convertendo de string para number
+    this.loading = false;
     const map = L.map('map').setView([Number(userLocation.lat), Number(userLocation.lon)], 13);
     //Passando o mapa para div com id=map no html
     this.map = map;

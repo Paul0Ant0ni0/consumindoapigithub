@@ -3,7 +3,7 @@
 qualquer css da aplicação*/
 
 :root{
-    --verde: #158552;
+    --azul: #295564;
 }
 
 /*Zerando as propriedades*/
@@ -13,5 +13,10 @@ qualquer css da aplicação*/
     padding: 0;
 }
 
-html, body { height: 100%; overflow: auto;}
+html, body { height: 100%;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-snackbar{
+    background-color: var(--azul);
+    color: white;
+}

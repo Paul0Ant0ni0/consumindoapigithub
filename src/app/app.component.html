@@ -1,11 +1,29 @@
-<main class="container">
+<main class="container-principal">
   <div class="double-width">
     <!-- Validando se a lista de usuários não está vazia, se não estiver vazia, exibe os usuários,
      caso contrário, fica invisivel-->
     <div class="container-lista" *ngIf="listUsers.length != 0">
       <h3>Lista de usuários</h3>
+      <form class="form-search">
+        <section>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Username*" aria-label="Username*"
+              aria-describedby="button-addon2" (change)="clearInput(input.value)" #input>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" [disabled]="disableButton" (click)="searchUser(input.value)">
+              <mat-icon>search</mat-icon></button>
+          </div>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Data de criação</mat-label>
+            <input matInput type="date" (blur)="getUserByDate(inputDate.value)" #inputDate>
+          </mat-form-field>
+        </section>
+      </form>
+
+
+
       <div class="lista">
-        <mat-card class="card-user" *ngFor="let user of listUsers">
+        <mat-card class="card-user" *ngFor="let user of listUsers | slice:((paginator.pageIndex) * paginator.pageSize):((paginator.pageIndex + 1) * paginator.pageSize)">
           <!-- Recebendo o link da foto do usuário
             Exemplo: [src]="user.avatar_url" ou src="{{user.avatar_url}}"
            -->
@@ -15,14 +33,16 @@
           </mat-card-content>
           <mat-card-actions>
             <!-- Efetuando o evento de click e passando um usúario como paramentro -->
-            <a mat-button class="btn-visualizar" (click)="getDetails(user)"><img src="./../assets/imagens/icon-visualizar.png"
-                alt="icone visualizar"></a>
+            <a mat-button class="btn-visualizar" (click)="getDetails(user)"><img
+                src="./../assets/imagens/icon-visualizar.png" alt="icone visualizar"></a>
             <a mat-button class="bnt-deletar" (click)="deletUser(user)"><img src="./../assets/imagens/icon-lixeira.png"
                 alt="icone visualizar"></a>
           </mat-card-actions>
         </mat-card>
       </div>
-     
+      <mat-paginator #paginator [length]="listUsers.length" [pageSize]="8" [pageSizeOptions]="[8, 10, 25, 50]"
+      showFirstLastButtons>
+  </mat-paginator>
     </div>
   </div>
 
