@@ -1,27 +1,39 @@
 # Pesquisausuariogithub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+<h1 align="center">Consumindo API do GitHub com Angular</h1>
 
-## Development server
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-Angular-red" alt="Made with Angular">
+  <img src="https://img.shields.io/badge/Hosted%20on-Firebase-yellow" alt="Hosted on Firebase">
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p align="center">
+  Esse projeto é uma aplicação em Angular que consome a API do GitHub para exibir informações de usuários e repositórios.
+</p>
 
-## Code scaffolding
+<p align="center">
+  <a href="https://app-usuariogithub.web.app/">Link da aplicação</a> | <a href="https://github.com/Paul0Ant0ni0/consumindoapigithub">Repositório no GitHub</a>
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<table align="center">
+  <tr>
+    <td colspan="2">
+      <a href="https://app-usuariogithub.web.app/">
+         <img src="https://i.imgur.com/Pj1SJj8.png" alt="Imagem 1">      
+      </a>
+    </td>
+    
+  </tr>
+  <tr align="center">
+    <td>
+      <a href="https://app-usuariogithub.web.app/">
+       <img src="https://i.imgur.com/bnCgR5u.png" alt="Imagem 3">
+      </a>
+    </td>
+ <td>
+      <a href="https://app-usuariogithub.web.app/">
+         <img src="https://i.imgur.com/HERXC8O.png" alt="Imagem 2">
+      </a>
+    </td>
+  </tr>
+</table>
